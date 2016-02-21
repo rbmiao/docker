@@ -1,0 +1,10 @@
+FROM centos:rbmiao
+MAINTAINER RongbingMiao "rbmiao@gmail.com"
+MAINTAINER version "online"
+
+USER root
+ADD php.ini /home/work/local/php/etc/
+ADD php-fpm.conf /home/work/local/php/etc/
+
+ONBUILD ADD project-code.tar.gz  /home/work/
+ONBUILD ENTRYPOINT ["supervisord", "-c", "/etc/supervisord.conf", "-n"]
