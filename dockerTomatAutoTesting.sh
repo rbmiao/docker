@@ -1,6 +1,6 @@
 #!/bin/sh
 # Jenkins Build Shell Script
-# Author zdzhou@iflytek.com
+# Author Rongbing Miao (rbmiao@gmail.com)
 
 set -e 
 # Get running docker image name
